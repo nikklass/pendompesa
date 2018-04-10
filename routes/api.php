@@ -14,6 +14,7 @@ $api->version('v1', function($api){
         //mpesa initiate
         $api->group(['prefix' => 'mpesa'], function ($api) {
             $api->post('/onlinepayment', 'Api\Mpesa\ApiMpesaOnlineController@store');
+            $api->get('/onlinepayment', 'Api\Mpesa\ApiMpesaOnlineController@store');
         });
 
         //mpesa callbacks
