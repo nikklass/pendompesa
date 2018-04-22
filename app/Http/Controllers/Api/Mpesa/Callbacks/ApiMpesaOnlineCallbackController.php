@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\Mpesa;
+namespace App\Http\Controllers\Api\Mpesa\Callbacks;
 
 use App\Entities\MpesaOnlinePayment;
 use App\Http\Controllers\BaseController;

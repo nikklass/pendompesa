@@ -73,8 +73,12 @@ return [
     'application_status' => env('MPESA_APP_STATUS', ''),
     'mpesa_consumer_key' => env('MPESA_CONSUMER_KEY', ''),
     'mpesa_consumer_secret' => env('MPESA_CONSUMER_SECRET', ''),
-    
+    'mpesa_consumer_key_2' => env('MPESA_CONSUMER_KEY_2'),
+    'mpesa_consumer_secret_2' => env('MPESA_CONSUMER_SECRET_2'),
+    'mpesa_consumer_key_3' => env('MPESA_CONSUMER_KEY_3'),
+    'mpesa_consumer_secret_3' => env('MPESA_CONSUMER_SECRET_3'),
 
+    'mpesa_initiator_security_credential' => env('MPESA_INITIATOR_SECURITY_CREDENTIAL', ''),
 
     /*
     |--------------------------------------------------------------------------

@@ -38,6 +38,7 @@ return [
     ],
     'mpesa' => [
         'getpayments_url' => $remote_base_api_url . 'api/mpesa/getpayments',
+        
     ],
 
     'images' => [

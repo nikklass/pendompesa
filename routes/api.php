@@ -18,7 +18,14 @@ $api->version('v1', function($api){
 
         //mpesa callbacks
         $api->group(['prefix' => 'mpesa-callback'], function ($api) {
-            $api->post('/onlinepayment', 'Api\Mpesa\ApiMpesaOnlineCallbackController@store');
+            $api->post('/onlinepayment', 'Api\Mpesa\Callbacks\ApiMpesaOnlineCallbackController@store');
+            $api->post('/accountbalance', 'Api\Mpesa\Callbacks\ApiMpesaAccountBalanceCallbackController@store');
+        });
+
+        //mpesa callbacks
+        $api->group(['prefix' => 'mpesa-timeout'], function ($api) {
+            $api->post('/onlinepayment', 'Api\Mpesa\Timeouts\ApiMpesaOnlineTimeoutController@store');
+            $api->post('/accountbalance', 'Api\Mpesa\Timeouts\ApiMpesaAccountBalanceTimeoutController@store');
         });
 
         //countries

@@ -13,8 +13,8 @@ class MpesaTransaction
      * @return mixed
      */
     public static function generateLiveToken(){
-        $consumer_key=config("app.mpesa_consumer_key");
-        $consumer_secret=config("app.mpesa_consumer_secret");
+        $consumer_key=config("app.mpesa_consumer_key_2");
+        $consumer_secret=config("app.mpesa_consumer_secret_2");
 
         if(!isset($consumer_key)||!isset($consumer_secret)){
             die("please declare the consumer key and consumer secret as defined in the documentation");
@@ -496,10 +496,8 @@ class MpesaTransaction
      * @param $timestamp | Timestamp
      * @return mixed|string
      */
-    public static function STKPushQuery($live, $checkoutRequestID, $businessShortCode, $password, $timestamp){
+    public static function STKPushQuery($checkoutRequestID, $businessShortCode, $password, $timestamp){
         
-        //$live=env("live");
-
         $live=config('app.application_status');
 
         if( $live =="live"){
